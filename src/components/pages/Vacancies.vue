@@ -1,3 +1,7 @@
-<template></template>
+<template>
+  <Company />
+</template>
 
-<script setup></script>
+<script setup>
+import Company from "../templates/Company.vue";
+</script>

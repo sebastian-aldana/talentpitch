@@ -34,10 +34,10 @@
       <img src="../../images/qr-code.png" alt="company profile" />
     </el-card>
     <div class="w-max">
-      <Button text="Compartir Perfil" />
+      <Button text="Compartir Perfil" @click="onShareButton" />
     </div>
     <el-card class="box-card DownloadResumeButton rounded my-4" shadow="always">
-      <Button />
+      <Button @click="onDownloadResume" />
       <p class="text-xs ml-3 text-gray">Descargar Resumen</p>
     </el-card>
     <div class="grid grid-cols-1 divide-y-[0.5px] divide-x-reverse">
@@ -78,6 +78,16 @@ const profileData = ref([
   { text: "Vacantes", icon: Document, data: 30 },
   { text: "Contenido", icon: PictureFilled, data: 50 },
 ]);
+
+const onShareButton = () => {
+  window.open(
+    "http://www.linkedin.com/shareArticle?mini=true&url=https://talentpitch.vercel.app/"
+  );
+};
+
+const onDownloadResume = () => {
+  window.open("https://www.file.io/ZwDy/download/WemI0OgoVx3f");
+};
 </script>
 
 <style>
