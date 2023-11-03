@@ -33,6 +33,7 @@
 import CompanyOverview from "./Suborganism/CompanyOverview.vue";
 import Categories from "./Suborganism/Categories.vue";
 import Languajes from "./Suborganism/Languajes.vue";
+import { ref } from "vue";
 const profilecategoriesData = ref([
   {
     title: "Areas de intres",

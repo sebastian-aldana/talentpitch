@@ -3,7 +3,7 @@ import Profile from "./components/pages/Profile.vue";
 import Vacancies from "./components/pages/Vacancies.vue";
 
 const routes = [
-    { path: "/profile", component: Profile },
+    { path: "/", component: Profile },
     { path: "/vacancies", component: Vacancies },
 ];
 
