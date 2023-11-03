@@ -3,8 +3,8 @@
     <el-card shadow="always">
       <div>
         <img
-          class="object-cover object-bottom w-full h-13 my-6"
-          src="../../../../images/vacancie-image.png"
+          class="object-cover w-full h-12 my-6"
+          v-bind:src="data.image"
           alt=""
         />
       </div>
@@ -21,11 +21,10 @@
       </div>
       <div>
         <div class="mb-5">
-          <h3 class="text-blue text-lg">Lider Ux/Ui</h3>
+          <h3 class="text-blue text-lg">{{ data.name }}</h3>
           <el-tag class="mb-3">Creada por organización: Nombre</el-tag>
-          <p class="text-gray">
-            ¿Cómo podrías crear un plan de ejecución a seis meses desde tu área
-            de conocimiento para generar valor en una organización?
+          <p class="text-gray truncate h-8">
+            {{ data.description }}
           </p>
         </div>
         <div
@@ -52,20 +51,20 @@ import { Share } from "@element-plus/icons-vue";
 import Button from "../../../atoms/Button.vue";
 import { ref } from "vue";
 
+const { data } = defineProps(["data"]);
+
 const vacanciesData = ref([
   {
     name: "vistas",
-    data: 60,
+    data: data.views_count,
   },
   {
     name: "comentarios",
-    data: 60,
+    data: Math.floor(Math.random() * 10),
   },
   {
     name: "pitches",
-    data: 60,
+    data: Math.floor(Math.random() * 10),
   },
 ]);
-
-console.log(vacanciesData);
 </script>

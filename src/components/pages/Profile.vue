@@ -2,7 +2,7 @@
   <Header />
   <div class="grid grid-cols-12">
     <CompanyProfile class="col-span-3" />
-    <div class="col-span-9">
+    <div class="col-span-9 m-6">
       <CultureMatch />
       <CompanyTabs />
     </div>

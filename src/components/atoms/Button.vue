@@ -9,8 +9,6 @@
   >
 </template>
 
-<script>
-export default {
-  props: ["text", "type"],
-};
+<script setup>
+const { text, type } = defineProps(["text", "type"]);
 </script>

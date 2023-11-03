@@ -6,14 +6,17 @@
     height="auto"
     class="carrousel-container"
   >
-    <el-carousel-item v-for="item in 6" :key="item">
-      <VacanciesCard />
+    <el-carousel-item v-for="vacancie in state.vacancies" :key="item">
+      <VacanciesCard v-bind:data="vacancie" />
     </el-carousel-item>
   </el-carousel>
 </template>
 
-<script>
+<script setup>
 import VacanciesCard from "./suborganism/VacanciesCard.vue";
+import { useStore } from "vuex";
+
+const { state } = useStore();
 </script>
 
 <style>

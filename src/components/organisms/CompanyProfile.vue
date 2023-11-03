@@ -36,9 +36,9 @@
     <div class="w-max">
       <Button text="Compartir Perfil" />
     </div>
-    <el-card class="box-card flex" shadow="always">
+    <el-card class="box-card DownloadResumeButton rounded my-4" shadow="always">
       <Button />
-      <p>Descargar Resumen</p>
+      <p class="text-xs ml-3 text-gray">Descargar Resumen</p>
     </el-card>
     <div class="grid grid-cols-1 divide-y-[0.5px] divide-x-reverse">
       <div v-for="data in profileData" class="flex justify-between py-4">
@@ -67,6 +67,7 @@ import {
   Histogram,
   Position,
   Link,
+  Download,
 } from "@element-plus/icons-vue";
 
 const profileData = ref([
@@ -84,5 +85,11 @@ const profileData = ref([
   display: flex;
   justify-content: center;
   margin: 2px 0;
+}
+
+.DownloadResumeButton .el-card__body {
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 </style>

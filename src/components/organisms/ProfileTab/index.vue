@@ -2,78 +2,39 @@
   <div class="grid gap-4">
     <CompanyOverview />
     <div class="grid gap-3 grid-cols-2">
-      <Categories />
-      <Categories />
+      <div v-for="interes in state.companyInformation.companyIntereses">
+        <Categories v-bind:data="interes" />
+      </div>
     </div>
     <div>
       <h2>Lo que buscamos</h2>
       <div></div>
     </div>
     <div class="grid gap-3 grid-cols-2">
-      <Categories />
-      <Categories />
-      <Categories />
-      <Languajes />
-      <Categories />
+      <div v-for="requirement in state.companyInformation.companyRequirements">
+        <Categories v-bind:data="requirement" />
+      </div>
+      <Languajes
+        v-bind:languajes="state.companyInformation.companyLanguagesRequirements"
+      />
     </div>
     <div>
       <h2>Lo que ofrecemos en la empresa</h2>
       <div></div>
     </div>
     <div class="grid gap-3 grid-cols-2">
-      <Categories />
-      <Categories />
-      <Categories />
-      <Categories />
+      <div v-for="offer in state.companyInformation.companyOffers">
+        <Categories v-bind:data="offer" />
+      </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import CompanyOverview from "./Suborganism/CompanyOverview.vue";
 import Categories from "./Suborganism/Categories.vue";
 import Languajes from "./Suborganism/Languajes.vue";
-import { ref } from "vue";
-const profilecategoriesData = ref([
-  {
-    title: "Areas de intres",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "Vacantes sugeridas por AI",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "conocimientos",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "Habilidades",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "Herramientas",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "Metodologias",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "Beneficios que ofrecemos",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "Formas de trabajo que ofrecemos",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "Cultura que ofrecemos",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-  {
-    title: "Comunidades",
-    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
-  },
-]);
+import { useStore } from "vuex";
+
+const { state } = useStore();
 </script>
