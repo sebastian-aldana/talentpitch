@@ -41,59 +41,14 @@
       <p>Descargar Resumen</p>
     </el-card>
     <div class="grid grid-cols-1 divide-y-[0.5px] divide-x-reverse">
-      <div class="flex justify-between py-4">
+      <div v-for="data in profileData" class="flex justify-between py-4">
         <div class="flex">
           <el-icon :size="20" class="mr-2">
-            <UserFilled size="10" />
+            <!-- {{ `<${data.icon}/> ` }} -->
           </el-icon>
-          <p>Talentos</p>
+          <p>{{ data.text }}</p>
         </div>
-        <p>20</p>
-      </div>
-      <div class="flex justify-between py-4">
-        <div class="flex">
-          <el-icon :size="20" class="mr-2">
-            <View />
-          </el-icon>
-          <p>Vistas de perfil</p>
-        </div>
-        <p>20</p>
-      </div>
-      <div class="flex justify-between py-4">
-        <div class="flex">
-          <el-icon :size="20" class="mr-2">
-            <VideoCamera />
-          </el-icon>
-          <p>Pitches recibidos</p>
-        </div>
-        <p>20</p>
-      </div>
-      <div class="flex justify-between py-4">
-        <div class="flex">
-          <el-icon :size="20" class="mr-2">
-            <Histogram />
-          </el-icon>
-          <p>Exhibiciones</p>
-        </div>
-        <p>20</p>
-      </div>
-      <div class="flex justify-between py-4">
-        <div class="flex">
-          <el-icon :size="20" class="mr-2">
-            <Document />
-          </el-icon>
-          <p>Vacantes</p>
-        </div>
-        <p>20</p>
-      </div>
-      <div class="flex justify-between py-4">
-        <div class="flex">
-          <el-icon :size="20" class="mr-2">
-            <PictureFilled />
-          </el-icon>
-          <p>Contenido</p>
-        </div>
-        <p>20</p>
+        <p>{{ data.data }}</p>
       </div>
     </div>
   </el-card>
@@ -111,9 +66,17 @@ import {
   PictureFilled,
   Histogram,
   Position,
-  Star,
   Link,
 } from "@element-plus/icons-vue";
+
+const profileData = ref([
+  { text: "Talentos", icon: UserFilled, data: 20 },
+  { text: "Vistas de perfil", icon: View, data: 15 },
+  { text: "Pitches Recibidos", icon: VideoCamera, data: 40 },
+  { text: "Exhibiciones", icon: Histogram, data: 50 },
+  { text: "Vacantes", icon: Document, data: 30 },
+  { text: "Contenido", icon: PictureFilled, data: 50 },
+]);
 </script>
 
 <style>

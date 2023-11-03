@@ -33,4 +33,46 @@
 import CompanyOverview from "./Suborganism/CompanyOverview.vue";
 import Categories from "./Suborganism/Categories.vue";
 import Languajes from "./Suborganism/Languajes.vue";
+const profilecategoriesData = ref([
+  {
+    title: "Areas de intres",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "Vacantes sugeridas por AI",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "conocimientos",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "Habilidades",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "Herramientas",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "Metodologias",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "Beneficios que ofrecemos",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "Formas de trabajo que ofrecemos",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "Cultura que ofrecemos",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+  {
+    title: "Comunidades",
+    tags: ["copy,copy,copy,copy,copy,copy,copy,copy,copy"],
+  },
+]);
 </script>

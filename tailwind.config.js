@@ -9,8 +9,10 @@ export default {
       secondary: '#E8EAF6',
       green: '#8BC34A',
       purplelight: "#9FA8DA",
+      pinklight: "#E565A5",
       blue: "#1A237E",
       graylight: "#E8EAF6",
+      gray: "#666666",
       white: '#FFFFFF'
     },
     extend: {},
